@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Registration Form</title>
+</head>
+    <!-- Place this code just before </body> -->
+    <div id="passwordMismatchModal" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closePasswordMismatchModal()">&times;</span>
+          <p>Passwords do not match. Please check again.</p>
+        </div>
+      </div>
+<body>
+    <div class="container">
+        <h1 class="form-title">Registration</h1>
+        <form action="#">
+            <div class="main-user-info">
+                <div class="user-input-box">
+                    <label for="fullName">Full name</label>
+                    <input type="text" id="fullName" name="fullName" placeholder="Enter Full Name" required>
+                </div>
+                <div class="user-input-box">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" placeholder="Enter Username" required>
+                </div>
+                <div class="user-input-box">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter Email" required>
+                </div>
+                <div class="user-input-box">
+                    <label for="phoneNumber">Phone Number</label>
+                    <input type="text" id="phoneNumber" name="phoneNumber" placeholder="Enter Phone Number" required>
+                </div>
+                <div class="user-input-box">
+                    <label for="password">Password</label>
+                    <div class="password-eye" onclick="togglePasswordVisibility()">
+                        <i class="bx bx-show"></i>
+                      </div>
+                    <input type="password" id="password" placeholder="Password" required>
+                    <div class="password-strength">
+                        <span id="strength"></span>
+                        <div class="strength-line" id="strength-line"></div>
+                      </div>
+                </div>
+                <div class="user-input-box">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password" required>
+                    <span id="passwordError" class="error-message"></span>
+                </div>
+                </div>
+                <div class="gender-details-box">
+                <span class="gender-title">Gender</span>
+                <div class="gender-category">
+                    <input type="radio" name="gender" id="male" required>
+                    <label for="male">Male</label>
+                    <input type="radio" name="gender" id="female" required>
+                    <label for="female">Female</label>
+                    <input type="radio" name="gender" id="other" required>
+                    <label for="other">Other</label>
+                </div>
+            </div>
+            <div class="form-submit-btn">
+                <input type="button" id="registerButton" value="Register" onclick="openSuccessPage()">
+
+            <div class="sign-text">
+            <p><center>
+                <span>
+                    Already have an account?
+                </span>
+                <b onclick="toggle()" class="pointer">
+                    Sign in here
+                </b>
+            </center>
+            </p>
+            </div>
+            <div class="form-wrapper">
+            <div class="social-list align-items-center sign-in">
+                <div class="align-items-center facebook-bg">
+                    <i class='bx bxl-facebook'></i>
+                </div>
+                <div class="align-items-center google-bg">
+                    <i class='bx bxl-google'></i>
+                </div>
+                <div class="align-items-center twitter-bg">
+                    <i class='bx bxl-twitter'></i>
+                </div>
+                <div class="align-items-center insta-bg">
+                    <i class='bx bxl-instagram-alt'></i>
+                </div>
+            </div>
+        </div>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
